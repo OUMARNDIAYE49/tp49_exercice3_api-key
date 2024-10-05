@@ -19,7 +19,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-const API_KEY = 'votre-api-key-secrete'; 
+const API_KEY = 'omar-4952'; 
 
 function apiKeyMiddleware(req, res, next) {
   const apiKey = req.headers['x-api-key'];

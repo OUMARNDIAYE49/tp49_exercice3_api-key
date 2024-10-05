@@ -21,3 +21,34 @@ Ce projet est une API simple créée avec **Express.js**. Il inclut des mesures 
 ```bash
 npm install
 ```
+
+2. Pour lancer 
+```bash
+  npm start
+```
+
+## Endpoints
+
+1. GET /api/hello
+
+    Description : Retourne un message de bienvenue.
+    Réponse :
+
+    json
+    { "message": "Hello world" }
+
+2. GET /api/private-data (Route sécurisée)
+
+    Description : Retourne des données privées, accès restreint par clé API.
+    Headers requis : x-api-key: votre-api-key-secrete
+    Réponse (clé valide) :
+
+    json
+
+    { "message": "Voici vos données privées" }
+
+    Réponse (clé invalide ou absente) :
+
+    json
+
+    { "message": "Accès interdit. Clé API manquante ou invalide." }
